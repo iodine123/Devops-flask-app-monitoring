@@ -1,6 +1,5 @@
-[2025-05-18 07:00:45] Flask-app [#1] Java_app | 200 ok | /login
-[2025-05-18 07:36:56] Flask-app [#2] Java_app | 404 not Found | /login22
-[2025-05-18 07:41:28] Flask-app [#3] User service | 500 Forbidden | /user
-[2025-05-18 08:57:00] Flask-app [#4] INFO | Api call | /loginAuth
-[2025-05-18 08:57:55] Flask-app [#5] INFO | Api call | /generateToken
-[2025-05-18 08:58:54] Flask-app [#6] WARN | Chrome | /loginPage
+[2025-05-18 09:11:21] Flask-service [#1] WARN Chrome /loginPage
+[2025-05-18 09:11:49] Flask-service [#2] INFO Api call /loginAuth
+[2025-05-18 09:12:22] Flask-service [#3] INFO User access /loginPage
+[2025-05-18 09:12:52] Flask-service [#4] INFO User access /home
+[2025-05-18 09:13:09] Flask-service [#5] INFO Api call /userGetData

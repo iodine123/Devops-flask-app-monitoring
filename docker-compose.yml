@@ -26,6 +26,27 @@ services:
       - "9001:9001"
     networks:
       - monitoring-net
+  
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.17.28
+    container_name: elasticsearch
+    networks:
+      - monitoring-net
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    environment:
+      - discovery.type=single-node
+
+  kibana-dashboard:
+    image: docker.elastic.co/kibana/kibana:7.17.28
+    container_name: kibana
+    networks:
+      - monitoring-net
+    ports:
+      - "5601:5601"
+    environment:
+      - ELASTICSEARCH_HOSTS=http://elaticsearch:9200
 
 networks:
   monitoring-net:
