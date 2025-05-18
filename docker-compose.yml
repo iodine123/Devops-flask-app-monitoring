@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  flask-app:
+    build: App/.
+    container_name: flask-app
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./flask-app-logs:/app/logs  
+    networks:
+      - app-net
+
+  fluentbit:
+    build: Monitoring/fluent-bit
+    container_name: fluentbit
+    volumes:
+      - ./flask-app-logs:/logs:ro
+    networks:
+      - monitoring-net
+
+  fluentd:
+    build: Monitoring/fluentd
+    container_name: fluentd
+    ports:
+      - "9001:9001"
+    networks:
+      - monitoring-net
+
+networks:
+  monitoring-net:
+  app-net:
+
