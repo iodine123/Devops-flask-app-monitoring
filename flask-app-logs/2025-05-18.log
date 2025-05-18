@@ -5,3 +5,7 @@
 [2025-05-18 09:13:09] Flask-service [#5] INFO Api call /userGetData
 [2025-05-18 09:54:05] Flask-service [#6] WARN Api call /user/suwanto12
 [2025-05-18 09:56:13] Flask-service [#7] WARN Api call /user/suwanto12/data
+[2025-05-18 10:03:13] Flask-service [#8] INFO Api Call /userGetData
+[2025-05-18 10:04:45] Flask-service [#9] WARN Api call /userInfo
+[2025-05-18 10:09:33] Flask-service [#10] Error User Access /user/supriawan/details
+[2025-05-18 10:25:52] Flask-service [#11] INFO Api call /getUserData
