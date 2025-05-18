@@ -3,3 +3,5 @@
 [2025-05-18 09:12:22] Flask-service [#3] INFO User access /loginPage
 [2025-05-18 09:12:52] Flask-service [#4] INFO User access /home
 [2025-05-18 09:13:09] Flask-service [#5] INFO Api call /userGetData
+[2025-05-18 09:54:05] Flask-service [#6] WARN Api call /user/suwanto12
+[2025-05-18 09:56:13] Flask-service [#7] WARN Api call /user/suwanto12/data
