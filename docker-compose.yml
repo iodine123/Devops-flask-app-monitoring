@@ -37,6 +37,8 @@ services:
       - "9300:9300"
     environment:
       - discovery.type=single-node
+      - network.host=0.0.0.0
+      - xpack.security.enabled=false #disable security on dev
 
   kibana-dashboard:
     image: docker.elastic.co/kibana/kibana:7.17.28
@@ -45,8 +47,10 @@ services:
       - monitoring-net
     ports:
       - "5601:5601"
+    depends_on:
+      - elasticsearch
     environment:
-      - ELASTICSEARCH_HOSTS=http://localhost:9200
+      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
 
 networks:
   monitoring-net:
